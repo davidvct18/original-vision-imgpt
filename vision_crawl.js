@@ -131,9 +131,7 @@ async function waitForEvent(page, event) {
 }
 
 (async () => {
-    //console.log( "###########################################" );
-   // console.log( "# GPT4V-Browsing by Unconventional Coding #" );
-   // console.log( "###########################################\n" );
+   
 
     const browser = await puppeteer.launch( {
         headless: "new",
@@ -223,7 +221,7 @@ async function waitForEvent(page, event) {
         const response = await openai.chat.completions.create({
             model: "gpt-4-vision-preview",
             max_tokens: 1024,
-            //seed: 665234,
+            
             messages: messages,
         });
 
